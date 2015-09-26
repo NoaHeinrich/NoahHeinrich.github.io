@@ -8,7 +8,25 @@ h1 {
 nav {
   font-family:sans-serif;
   text-decoration: none;
+  margin: auto;
+  padding-left: 130px;
+
 }
+
+a {
+  border: 2px solid black;
+  margin: 0px 25px 0px 25px;
+  padding: 5px 2px 5px 2px;
+}
+
 header {
   border: 1px solid;
+  background-color: #00CC66;
+  width: 100%;
+}
+
+img {
+  width: 50%;
+  margin: 30px 0px 30px 175px;
+
 }
