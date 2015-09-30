@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="default.css">
+  <link rel="stylesheet" type="text/css" href="blog.css">
+  <title>Arrays and Hashes</title>
+  <div><h1>Noah's Blog</h1></div>
+  <a href="http://www.noahheinrich.github.io/blog">Blog Home</a>
+  <p><a href="#">Previous</a> <a href="#">Next</a></p>
+</head>
+<body>
+  <header>
+    <h1>Hashing Things Out: Array of Sunshine</h1>
+    <h2>9/30/15</h2>
+  </header>
+  <section>
+    <p>
+      Arrays and hashes can be a little conceptually difficult for the uninitiated. Heck, they still confuse me a bit, but my research here can show you what the difference is, and the reasons to use one over the other.
+    </p>
+    <p>
+      An array is a collection of items that Ruby saves for you, and lets you access later. These items can be integers, floats, or strings, it treats them both the same. It looks very simple:</p>
+    <pre>
+      new_array = [1, 2.0, "Buckle my shoe"]
+    </pre>
+    <p>
+      You can tell Ruby to go through the entire list, or pick out just one by calling on its place in line. In our example, 1 has the place of 0, because all Ruby lists start at 0. Use an array to store simple information. Arrays are very useful for any sort of iterative program that you want to make, using the .each function.
+    </p>
+    <pre>
+      new_array.each {|x| puts x}
+    </pre>
+    <p>
+      This line of code will put every item within new_array onto the screen. It's simple, but the principle of it can be used for more complicated code.
+    </p>
+    <p>
+      Hashes, on the other hand, are a bit more complicated. Like arrays, they host a number of items, and those items can be any number or string. However, instead of just storing them in a line, a hash asks you to assign some sort of descriptor to everything you want to store. In essence, a hash is like two different arrays, connected at the hip.
+    </p>
+    <pre>
+      ident = { "First Name" => "Noah",
+        "Last Name" => "Heinrich",
+        "Age" => 25,
+        "Hometown" => "Detroit"
+      }
+    </pre>
+    <p>
+      You can use this to store data rather nicely. It's like your own personal little index that you can access at your leisure. Each item is linked to the second item. The first items act as the key, if you will, to the second item. I could write a little program to display the information.
+    </p>
+    <pre>
+      ident.each do |x, y|
+        puts "Your #{x} is #{y}."
+      end
+    </pre>
+    <p>
+      The output of this code would look like this:
+    </p>
+    <pre>
+      Your First Name is Noah.
+      Your Last Name is Heinrich.
+      Your Age is 25.
+      Your Hometown is Detroit.
+    </pre>
+    <p>
+      Impressive, right? Alright, I'll admit that I'm still a little shaky on what practical things you can do with arrays and hashes. I'm still at the stage where I'm making cute little games and calculators with Ruby. However, I can see the glimmerings of what can be. You can use hashes as the basis for databases, and use arrays to analyze the contents of a written message, or search for specific numbers or words. I don't know how to do these things yet, but you, like me, now know the difference between an array and a hash, and can use that knowledge to further your education!
+    </p>
+  </section>
+  <hr>
+  <footer>
+    <a href="http://www.noahheinrich.github.io">Go Home</a>
+    <a href="#">About Me</a> <a href="#">My Portfolio</a>
+    <a href="mailto:www.noahheinrich@gmail.com">Contact Me</a>
+    <p>Copyright Info, etc.</p>
+  </footer>
+</body>
+</html>
