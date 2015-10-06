@@ -14,7 +14,7 @@ nav {
 
 }
 
-a {
+.navigation {
   border: 2px solid black;
   margin: 0px 25px 0px 25px;
   padding: 5px 2px 5px 2px;
@@ -26,8 +26,20 @@ header {
   width: 100%;
 }
 
-img {
+section img {
   width: 50%;
   margin: 30px 0px 30px 175px;
+
+}
+
+aside {
+  float: right;
+  display: inline-block;
+  margin: auto;
+}
+
+aside img {
+height: 40px;
+width: 40px;
 
 }
