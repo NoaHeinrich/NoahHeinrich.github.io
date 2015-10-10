@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Enumerable Methods</title>
+</head>
+<nav>
+  <h1>Noah's Blog</h1>
+  <a href="http://www.noahheinrich.github.io/blog">Blog Home</a>
+  <p><a href="http://noahheinrich.github.io/blog/accessibility-blog.html">Previous</a> <a href="#">Next</a></p>
+</nav>
+<body>
+  <header>
+    <h1>Proper Cycle Safety</h1>
+    <h2>10/10/15</h2>
+  </header>
+  <section>
+    <p>
+      Alright kids, gather round. It's time to learn how to cycle. Not bicycle, motorcycle, or even unicycle. I mean that it's time to .cycle. However, just like a bicycle, this is not an activity to be undertaken lightly. If you want to cycle through your enumerable objects, you'd best be prepared. However, unlike a bicycle, you don't have to worry about crashing into a wall. The real danger of cycling in Ruby is that you'll never stop.
+    </p>
+    <p>
+      The syntax of this method is very simple. Call on it like you would any other iterative method. For example:
+    </p>
+    <pre>
+      (1..5).cycle {|x| puts x}.
+    </pre>
+    <p>
+      If you replaced .cycle with .each, you know you'd get the numbers 1 through 5, all laid out on their own lines, pretty as a picture. Cycle is a lot like .each, in that it will iterate through every element x, and do whatever you tell it to in the block. The difference, however, is that .each breaks automatically when it reaches the end of the enumerable. .Cycle will return to the beginning of the enumerable, and do it again. And again. And again. And again. And again. And again.
+    </p>
+    <p>
+      You get the picture. So, how do you use .cycle without creating an infinite loop? There are two ways. One, is you pass along an optional argument after .cycle, like so:
+    </p>
+    <pre>
+      (1..5).cycle(3) {|x| puts x}
+    </pre>
+    <p>
+      In this instance, .cycle functions like the times method, and will repeat the action 3 times, and then automatically stop. It's a much more compact way of writing a repetitive, iterative method, without having to use 3.times do.
+    </p>
+    <p>
+      The other way of preventing an infinite loop is to add a conditional break statement.
+    </p>
+    <pre>
+      (1..5).cycle do |x|
+        puts x
+        break if x == 5
+      end
+    </pre>
+    <p>
+      In this case, .cycle works like a regular loop, repeating the action on each item within the enumerable until the condition is met. This can save you a lot of space when compared to a loop that, for example, will keep going until a counter reaches a certain number. Say I, for whatever reason, wanted to pass a sequence of numbers into an array until there are 18 numbers in total. I could do it this way:
+    </p>
+    <pre>
+      array=[1, 2, 3, 4, 5]
+      new_array=Array.new
+      x=0
+      while x < 18
+        array.each do |i|
+          new_array << i
+          x+=1
+        end
+      end
+    </pre>
+    <p>
+      With .cycle, however, it becomes much more simple.
+    </p>
+    <pre>
+      array=[1, 2, 3, 4, 5]
+      new_array=Array.new
+      array.cycle do |i|
+          new_array << i
+          break if new_array.size==18
+      end
+    </pre>
+    <p>
+      That's .cycle! A very powerful enumerable method; just remember, if you don't add a break statement or an integer argument, it will just keep going forever. And that isn't nice for anybody.
+    </p>
+  </section>
+  <hr>
+  <footer>
+    <a href="http://www.noahheinrich.github.io">Go Home</a>
+    <a href="#">About Me</a> <a href="#">My Portfolio</a>
+    <a href="mailto:www.noahheinrich@gmail.com">Contact Me</a>
+    <p>Copyright Info, etc.</p>
+  </footer>
+</body>
+</html>
