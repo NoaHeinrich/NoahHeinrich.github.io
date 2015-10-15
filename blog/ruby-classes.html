@@ -59,11 +59,11 @@
     Can you guess how we'd call on these methods? The same format that we used to define it in the first place.
   </p>
   <pre>
-    what.ask(“What is your name?”)
-    what.ask(“What is your quest?”)
-    what.ask(“What is the airspeed velocity of an unladen swallow?”
+    what.ask(&quot;What is your name?&quot;)
+    what.ask(&quot;What is your quest?&quot;)
+    what.ask(&quot;What is the airspeed velocity of an unladen swallow?&quot;)
     what.read
-    [“What is your name?”, “What is your quest?”, “What is the airspeed velocity of an unladen swallow?”]
+    [&quot;What is your name?&quot;, &quot;What is your quest?&quot;, &quot;What is the airspeed velocity of an unladen swallow?&quot;]
   </pre>
   <p>
     Great! Now we have a class, a way of modifying our new objects, and a way of reading what's there. (Note: this isn't the most efficient way of using classes, but it's fun for illustrative purposes.) Notice that we used @questions in every one of these methods. We didn't have to redefine it or anything. So long as we're within this class, the methods know which variable you're accessing here.
@@ -79,8 +79,8 @@
       end
 
       def ask (q)
-        if q== “African or European?”
-          raise ArgumentError.new(“I don't know that! Argh!”)
+        if q== &quot;African or European?&quot;
+          raise ArgumentError.new(&quot;I don't know that! Argh!&quot;)
         else
           @questions << q
         end
