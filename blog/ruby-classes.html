@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Ruby Classes</title>
+</head>
+<nav>
+  <h1>My Blog</h1>
+  <a href="http://www.noahheinrich.github.io/blog">Blog Home</a>
+  <p><a href="http://noahheinrich.github.io/blog/enumerable-methods.html">Previous</a> <a href="#">Next</a></p>
+</nav>
+<body>
+  <header>
+    <h1>The Holy Class</h1>
+    <h2>10/15/15</h2>
+  </header>
+  <section>
+    <p>
+      Alright kids, siddown and shaddup, cause class in session. Honestly, you probably know me well enough by now to realize that if I'm opening with something like that, it's a pun. And you'd be right! Yes, the topic of the day are, in fact, classes. Classes are a very handy tool that you can use in Ruby. And if you've used Ruby before, you've been using classes all this time, you just didn't know it yet. Strings, arrays, integers, hashes, and floats: all of these are classes!
+    </p>
+    <p>
+      What exactly is a class though? In layman's terms, a class is a collection of methods and variables, all stored together under the same umbrella. When you define your own class, you can make it anything, and define any method you want underneath it. Let's make an example to see how this works. Let's say we want a class that will allow us to create an FAQ, which saves questions within an array. The first thing we'd want to do is to define and initialize our class.
+    </p>
+    <pre>
+      class Faq
+
+        def initialize
+          @question=[]
+        end
+      end
+    </pre>
+    <p>
+      Seems pretty straightforward, but what's the @ mean? This means that this variable is an instance variable. These are available throughout the class, and are not limited to each method (also called instance methods). Now, as it stands now, we have a class, though it can't do anything but create an empty array. We'd call on this class by inputting this:
+    </p>
+    <pre>
+      what=Faq.new
+    </pre>
+    <p>
+     OK, so now we have this empty array. What if we want to add to it? To do that, we'd have to define another instance method within the class. Let's call it ask. And furthermore, what if we want to see what's in the array? There are two ways of doing that: we could define another instance method, or we could use attr_reader. For now, let's stick with methods.
+   </p>
+   <pre>
+    class Faq
+
+      def initialize
+        @questions=[]
+      end
+
+      def ask (q)
+        @questions << q
+      end
+
+      def read
+        p @questions
+      end
+    end
+  </pre>
+  <p>
+    Can you guess how we'd call on these methods? The same format that we used to define it in the first place.
+  </p>
+  <pre>
+    what.ask(“What is your name?”)
+    what.ask(“What is your quest?”)
+    what.ask(“What is the airspeed velocity of an unladen swallow?”
+    what.read
+    [“What is your name?”, “What is your quest?”, “What is the airspeed velocity of an unladen swallow?”]
+  </pre>
+  <p>
+    Great! Now we have a class, a way of modifying our new objects, and a way of reading what's there. (Note: this isn't the most efficient way of using classes, but it's fun for illustrative purposes.) Notice that we used @questions in every one of these methods. We didn't have to redefine it or anything. So long as we're within this class, the methods know which variable you're accessing here.
+  </p>
+  <p>
+    I'd like to add one more thing here before we end for the day. How do you make sure a user uses your class the way you'd like them to? For that, you can create an argument error. This is a way of ending the program if somebody does something they're not supposed to. Let's add a silly example to our already existing code.
+  </p>
+  <pre>
+    class Faq
+
+      def initialize
+        @questions=[]
+      end
+
+      def ask (q)
+        if q== “African or European?”
+          raise ArgumentError.new(“I don't know that! Argh!”)
+        else
+          @questions << q
+        end
+      end
+
+      def read
+        p @questions
+      end
+
+    end
+  </pre>
+  <p>
+    If somebody asks that question, the class will know that this shouldn't be happening, and convey that message. And with that, you now have all the basic skills you need to define your own classes!
+  </p>
+  </section>
+  <hr>
+  <footer>
+    <a href="http://www.noahheinrich.github.io">Go Home</a>
+    <a href="#">About Me</a> <a href="#">My Portfolio</a>
+    <a href="mailto:www.noahheinrich@gmail.com">Contact Me</a>
+    <p>Copyright Info, etc.</p>
+  </footer>
+</body>
+</html>
