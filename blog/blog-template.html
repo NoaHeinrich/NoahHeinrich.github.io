@@ -3,23 +3,66 @@
 <head>
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
-  <title>Blog Template</title>
+  <title>Looping in JavaScript</title>
 </head>
 <nav>
-  <h1>Heading or Picture</h1>
+  <h1>My Blog</h1>
   <a href="http://www.noahheinrich.github.io/blog">Blog Home</a>
-  <p><a href="#">Previous</a> <a href="#">Next</a></p>
+  <p><a href="http://noahheinrich.github.io/blog/ruby-classes.html">Previous</a> <a href="#">Next</a></p>
 </nav>
 <body>
   <header>
-    <h1>Blog Title</h1>
-    <h2>Time Created</h2>
+    <h1>Looping in JavaScript vs Ruby</h1>
+    <h2>10/25/15</h2>
   </header>
   <section>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
+    <p>
+      JavaScript is, in many ways, the embarrassing uncle of programming languages. You know, the guy who ran off to join the Peace Corps in the 70s, and came back with a pony tail and a water pipe habit. The one who never talks about his job, and usually gets drunk on mimosas during family get togethers? Like yeah, he's a sweetheart, and is very smart in his own way, but still he gives you the creeps.
+    </p>
+    <p>
+      Alright, that metaphor got away from me. As you can no doubt tell, I'm not overly fond of JavaScript so far. Fortunately, there's a lot about JavaScript that is almost identical to Ruby. The keyword being “almost.” Here I will be focused on looping. Running loops in these languages follows the same general logic, and only differ in syntax.
+    </p>
+    <p>
+      For starters, both Ruby and JavaScript use while loops. And, fortunately, the syntax for these loops are in fact the same. While a condition is true, the code within the loop will keep repeating. The difference is that JavaScript has an alternate method, called a do-while loop. In essence, it is identical to a while loop, but just changes the order. Say you want to print a word five times. Using a while loop, you'd say (in JavaScript)
+    </p>
+    <pre>
+      while (n < 10) {
+        console.log(n)
+        n++
+      }
+    </pre>
+    <p>
+      This is the do-while version.
+    </p>
+    <pre>
+      do {
+        console.log(n)
+        n++
+      } while (n < 10);
+    </pre>
+    <p>
+      Looks almost the same, right? The major difference here is that the code reader will run the loop exactly once before it checks the break condition. This is useful for printing something to the screen once, and allowing the user to stop the program from printing again. (Ruby does have an equivalent of this, using the syntax begin-end-while).
+    </p>
+    <p>
+      Ruby has many different loops and iterators. In addition to while, it has for, until, next, retry, and several variations of each. JavaScript, most notably, doesn't have a built-in iterator. If you wanted to print every item in an array in Ruby, one could write it out so:
+    </p>
+    <pre>
+      array.each {|x| puts x}
+    </pre>
+    <p>
+      JavaScript doesn't have as many options as Ruby, and doesn't have the same enumerable functions. What JavaScript does have, however, is a very powerful for loop. What JavaScript's for loop is essentially the same as running a for loop in Ruby. It is designed to run with the clunky counter system. You know, counter equals zero, run the code, up the counter, break when counter equals a value? The good news is that JavaScript lets you put all that nonsense into a single line of code. Watch.
+    </p>
+    <pre>
+      for (n=0; n<array.length; n++) {
+        console.log(array[n])
+      }
+    </pre>
+    <p>
+      So it isn't a single line of code like the Ruby equivalent, but it's still very compact and effective. JavaScript's for loop is the most powerful and versatile looping tool in its arsenal. The way you define it in the parentheses above lets JavaScript run its loop in several ways, all in a single line of code.
+    </p>
+    <p>
+      So you don't have to be afraid of JavaScript. Sure he may smell kind of funny, but he's very sweet, and gives you a nice check on your birthday that usually doesn't bounce. Give him a hug.
+    </p>
   </section>
   <hr>
   <footer>
