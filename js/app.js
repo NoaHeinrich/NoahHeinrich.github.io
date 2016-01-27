@@ -7,4 +7,8 @@ $(document).ready(function(){
     event.preventDefault();
     $(this).css("background-color","#77D5D5")
   });
+  $("a").on("mouseover", function(event){
+    event.preventDefault();
+    $(this).css("color", "black")
+  });
 });
