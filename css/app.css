@@ -1,0 +1,25 @@
+body {
+  background-color: #4EBABA;
+}
+
+a {
+  color: black;
+}
+
+.my_name {
+  text-align: center;
+}
+
+h1 {
+  font-family: Marion;
+
+}
+.nav {
+  border: 1px solid black;
+  background-color: #77D5D5;
+}
+
+.nav-button {
+  text-align: center;
+  border: 1px solid black;
+}
