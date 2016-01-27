@@ -23,3 +23,12 @@ h1 {
   text-align: center;
   border: 1px solid black;
 }
+
+.bio {
+  text-align: justify;
+  border-bottom: 1px solid black;
+}
+
+h6 {
+  font-size: 12px;
+}
