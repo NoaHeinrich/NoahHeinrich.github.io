@@ -65,3 +65,12 @@ h6 {
   padding: 10px;
   padding-bottom: 60px;
 }
+
+.project {
+  height: 80%;
+  width: 80%;
+}
+
+.project-container {
+  text-align: justify;
+}
