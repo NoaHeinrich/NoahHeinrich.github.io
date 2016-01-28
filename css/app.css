@@ -25,10 +25,15 @@ h1 {
 }
 
 .bio {
-  text-align: justify;
+  text-align: center;
   border-bottom: 1px solid black;
 }
 
 h6 {
   font-size: 12px;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
 }
