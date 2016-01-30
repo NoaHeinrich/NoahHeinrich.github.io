@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #4EBABA;
+  background-color: #77D5D5;
   height: 100%;
 }
 
@@ -21,7 +21,7 @@ h1 {
 }
 .nav {
   border: 1px solid black;
-  background-color: #77D5D5;
+  background-color: #9ee1e1;
 }
 
 .nav-button {
@@ -50,10 +50,12 @@ h6 {
 
 .footer {
   border-top: 1px solid black;
+  background-color: #9ee1e1;
   position: absolute;
   bottom: 0%;
   width: 100%;
   height: 60px;
+  padding-top: 15px;
 }
 
 .container {
