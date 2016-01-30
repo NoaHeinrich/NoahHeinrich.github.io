@@ -1,11 +1,11 @@
 $(document).ready(function(){
   $(".nav-button").on('mouseover', function(event){
     event.preventDefault();
-    $(this).css("background-color", "#2E9C9C")
+    $(this).css("background-color", "#3ac3c3")
   });
   $(".nav-button").on("mouseleave", function(event){
     event.preventDefault();
-    $(this).css("background-color","#77D5D5")
+    $(this).css("background-color","#9ee1e1")
   });
   $("a").on("mouseover", function(event){
     event.preventDefault();
