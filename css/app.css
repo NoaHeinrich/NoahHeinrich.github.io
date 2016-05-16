@@ -66,6 +66,7 @@ h6 {
 .content {
   padding: 10px;
   padding-bottom: 60px;
+  text-align: justify;
 }
 
 .project {
