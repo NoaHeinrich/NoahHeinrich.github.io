@@ -77,3 +77,8 @@ h6 {
 .project-container {
   text-align: justify;
 }
+
+p {
+  font-weight: bold;
+  font-size: 18;
+}
