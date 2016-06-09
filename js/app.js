@@ -11,4 +11,9 @@ $(document).ready(function(){
     event.preventDefault();
     $(this).css("color", "black")
   });
+  $("#resume-button").on("click", function(event){
+    event.preventDefault();
+    $(this).hide();
+    $("iframe").show();
+  })
 });
